@@ -1,0 +1,152 @@
+:root{
+    --softRed:hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+    --darkBrown: hsl(25, 47%, 15%);
+    --mediumBrown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --veryPaleOrange: hsl(33, 100%, 98%);
+}
+
+body{
+    padding-top: 50px;
+    text-align: center;
+    font-family: "Epilogue";
+    background-color: var(--cream);
+}
+
+body p{
+    font-size: 11px;
+}
+
+.App > .Balance, .SpendingSection{
+    width: 325px;
+    border-radius: 20px;
+}
+
+.App .Balance{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--softRed);
+    box-sizing: border-box;
+    padding:20px;
+    position: relative;
+    align-items: center;
+}
+
+.App .Balance .content{
+    color: var(--cream);
+    text-align: left;
+    line-height: 1.5;
+}
+
+.App .Balance .content > *{
+    margin: 0;
+}
+
+.App .Balance img{
+    height: 30px;
+}
+
+.App .SpendingSection{
+    margin: 20px auto;
+    background-color: var(--veryPaleOrange);
+    box-sizing: border-box;
+    padding: 30px 20px ;
+}
+
+.App .SpendingSection h3{
+    text-align: left;
+    color: var(--darkBrown);
+    margin: 0 0 20px 0;
+}
+
+.App .SpendingSection .Graph{
+    height: 150px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.App .SpendingSection .Graph .Chart{
+    width: calc((100%/7));
+    position: relative;
+}
+
+.App .SpendingSection .Graph .Chart div{
+    background-color: var(--softRed);
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.App .SpendingSection .Graph .Chart div.showDetails{
+    opacity: 0.5;
+}
+
+.App .SpendingSection .Graph .Chart div.highest{
+    background-color: var(--cyan);
+}
+
+.App .SpendingSection .Graph .Chart p{
+    font-size: 9px;
+    color: var(--mediumBrown);
+}
+
+.App .SpendingSection .Graph .Chart .amount{
+    background-color:hsl(25, 47%, 15%);
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    color: white;
+    bottom: 100%;
+    margin: 0 0 5px 0;
+}
+
+.App .SpendingSection hr{
+    border: none;
+    border-top: 0.1px solid;
+    margin: 15px 0;
+    border-color: var(--mediumBrown);
+}
+
+
+.App .SpendingSection .Summery{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.App .SpendingSection .Summery p{
+    color: var(--mediumBrown);
+}
+
+.App .SpendingSection .Summery .title{
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.App .SpendingSection .Summery .currentMonth{
+    text-align: left;
+}
+
+.App .SpendingSection .Summery .currentMonth > h2{
+    margin: 0;
+    color: var(--darkBrown);
+}
+
+.App .SpendingSection .Summery .compare{
+    text-align: right;
+}
+
+.App .SpendingSection .Summery .compare > *{
+    margin: 0;
+    line-height: 1.25;
+}
+
+.App .SpendingSection .Summery .compare .precent{
+    color: var(--darkBrown);
+    font-weight: 700;
+}
